@@ -4,8 +4,11 @@ on:
     branches:
       - main
 jobs:
-  my-jobs:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: print hello world
-        run: echo "Hello world"
+      - name: ack
+        run: echo "start building"
+      - name: build docker container
+        run: docker build -t self-healing-service . 
+        run: docker run --name container-1 self-healing-service
