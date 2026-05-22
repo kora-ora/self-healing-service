@@ -10,5 +10,4 @@ jobs:
       - name: ack
         run: echo "start building"
       - name: build docker container
-        run: docker build -t self-healing-service . 
-        run: docker run --name container-1 self-healing-service
+        run: docker build -t self-healing-service . && docker run --name container-1 self-healing-service
