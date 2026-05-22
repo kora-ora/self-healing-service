@@ -1,13 +1,13 @@
 name: test
 on: 
- push:
-  branches:
-   - main
+  push:
+    branches:
+      - main
 
 jobs:
  my-jobs: 
-  run-on: ubuntu-latest 
+  runs-on: ubuntu-latest 
   steps:
-   name: print hello world
-   run: echo "Hello world"
+   - name: print hello world
+     run: echo "Hello world"
    
